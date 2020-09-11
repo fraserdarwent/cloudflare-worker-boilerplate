@@ -1,0 +1,4 @@
+account_id = ""
+name = "cloudflare-worker-boilerplate"
+type = "javascript"
+workers_dev = true
