@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "cloudflare-worker-boilerplate",
   "version": "1.0.0",
   "description": "Cloudflare Worker Boilerplate",
@@ -10,11 +9,14 @@
     "develop:wrangler": "while [ ! -f dist/bundle.js ];do echo '⌛ Waiting for bundle to be available';sleep 0.5; done; wrangler dev -p 8080",
     "develop:rollup": "rollup --config --watch",
     "build": "cross-env NODE_ENV=production npm-run-all --serial clean --parallel build:*",
-    "build:rollup": "rollup --config"
+    "build:rollup": "rollup --config",
+    "format": "prettier --write src/"
   },
-  "license": "Unlicensed",
+  "license": "MIT",
   "devDependencies": {
-    "@cloudflare/wrangler": "^1.10.3"
+    "@cloudflare/wrangler": "^1.10.3",
+    "prettier": "^2.1.1",
+    "prettier-airbnb-config": "^1.0.0"
   },
   "dependencies": {
     "@fraserdarwent/javascript-logger": "^1.0.3",
